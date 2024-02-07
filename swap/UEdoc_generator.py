@@ -81,7 +81,7 @@ signal.signal(signal.SIGINT, signal_handler)
 def generate_plist(opts):
 	print "Generating Info.plist"
 	identifier = "com.epic.unrealengine4"
-	name = "UE4"
+	name = "UE"
 	fallbackURL = "https://docs.unrealengine.com/latest/en-US/"
 	version = None
 
