@@ -1,0 +1,12 @@
+FROM alpine:edge
+
+# 指定工作目录
+WORKDIR /root/
+
+# 修改apk镜像源,安装python2和pip
+RUN echo -e 'https://mirrors.aliyun.com/alpine/v3.6/main/\nhttps://mirrors.aliyun.com/alpine/v3.6/community/' > /etc/apk/repositories \
+    && apk update \
+    && apk add python py-pip
+
+# 安装脚本需要的库
+RUN pip install bs4
